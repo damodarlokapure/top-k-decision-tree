@@ -1,0 +1,17 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Testing & IDE
+.pytest_cache/
+.vscode/
+.idea/
+.DS_Store
