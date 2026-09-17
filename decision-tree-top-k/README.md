@@ -128,22 +128,6 @@ To guarantee strict benchmark fairness, median thresholds for binary feature tra
 
 ---
 
-## 🎓 College Presentation & Viva Guide
-
-### Q1: What problem does Top-k Decision Tree solve?
-**Answer**: Classic decision trees use greedy heuristics to pick the single best split feature at each node. Greedy choices can lead to sub-optimal subtrees. Top-k decision trees expand search locally by considering the top $k$ candidate features before choosing a split, discovering trees with better overall generalization.
-
-### Q2: Why is `k=1` equivalent to Greedy?
-**Answer**: When $k=1$, the algorithm evaluates only 1 candidate feature—the one with the highest Information Gain. This is identical to classic greedy decision tree split selection.
-
-### Q3: How are candidate splits evaluated in this Top-k implementation?
-**Answer**: For each of the top $k$ features, a candidate subtree is constructed recursively. The candidate split yielding the highest local classification accuracy on the node's training subset is selected, using Information Gain as a tie-breaker.
-
-### Q4: What is the trade-off of using larger $k$?
-**Answer**: Higher $k$ values increase training runtime because $k$ candidate subtrees are evaluated at each non-leaf node. However, prediction runtime remains identical during inference.
-
----
-
 ## ⚠️ Educational Scope & Limitations
 
 This project is a **lightweight educational approximation** designed for clarity and viva presentation. It does not attempt to reproduce the full theoretical proofs or C++ solver optimizations from the original NeurIPS paper.
